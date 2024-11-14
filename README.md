@@ -21,60 +21,13 @@ Execute the C Program for the desired output.
 # PROGRAM:
 
 ## C program that receives a message from message queue and display them:
-// C Program for Message Queue (Writer Process) 
-#include <stdio.h> 
-#include <sys/ipc.h> 
-#include <sys/msg.h> 
+// 
+DEVELOPED BY: DANUSH REDDDY
+REG NO: 212223040029
 
-// structure for message queue 
-struct mesg_buffer { 
-	long mesg_type; 
-	char mesg_text[100]; 
-} message; 
-int main() 
-{ 	key_t key; 
-	int msgid;
-    // ftok to generate unique key 
-	key = ftok("progfile", 65); 
-	// msgget creates a message queue 
-	// and returns identifier 
-	msgid = msgget(key, 0666 | IPC_CREAT); 
-	message.mesg_type = 1; 
-	printf("Write Data : "); 
-	gets(message.mesg_text); 
-	// msgsnd to send message 
-	msgsnd(msgid, &message, sizeof(message), 0); 
-	// display the message 
-	printf("Data send is : %s \n", message.mesg_text); 
-	return 0; 
-} 
-// C Program for Message Queue (Writer Process) 
-#include <stdio.h> 
-#include <sys/ipc.h> 
-#include <sys/msg.h> 
+![image](https://github.com/user-attachments/assets/d32a7cb7-217c-4bc2-8863-5353e5a41396)
 
-// structure for message queue 
-struct mesg_buffer { 
-	long mesg_type; 
-	char mesg_text[100]; 
-} message; 
-int main() 
-{ 	key_t key; 
-	int msgid;
-    // ftok to generate unique key 
-	key = ftok("progfile", 65); 
-	// msgget creates a message queue 
-	// and returns identifier 
-	msgid = msgget(key, 0666 | IPC_CREAT); 
-	message.mesg_type = 1; 
-	printf("Write Data : "); 
-	gets(message.mesg_text); 
-	// msgsnd to send message 
-	msgsnd(msgid, &message, sizeof(message), 0); 
-	// display the message 
-	printf("Data send is : %s \n", message.mesg_text); 
-	return 0; 
-} 
+![image](https://github.com/user-attachments/assets/8fe5fb6d-7fec-4500-a19e-65ea7bd44ea8)
 
 
 
@@ -82,7 +35,10 @@ int main()
 
 
 
-## OUTPUT
+## OUTPUT:
+
+![image](https://github.com/user-attachments/assets/4199e6e3-5aae-4e2b-9e4c-2780d59e38de)
+
 
 
 
